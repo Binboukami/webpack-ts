@@ -16,6 +16,14 @@ module.exports = {
         use: "ts-loader",
         include: [path.resolve(__dirname, "src")],
         exclude: /node_modules/
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        dependency: { not: ['url'] },
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[hash][ext][query]'
+        }
       }
     ]
   },
@@ -34,6 +42,7 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "public"),
+    assetModuleFilename: 'assets/[hash][ext][query]',
   },
   devServer: {
     compress: true,
