@@ -27,6 +27,11 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Index',
+    }),
+  ],
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
     alias: {
