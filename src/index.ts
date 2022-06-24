@@ -1,9 +1,5 @@
-class Boilerplate {
-  log(arg: string) {
-    return console.log(arg)
-  }
+const app = document.getElementById("app")
+
+if (app) {
+  console.log("Hello, world!")
 }
-
-const boilerplate = new Boilerplate()
-
-boilerplate.log("Running")

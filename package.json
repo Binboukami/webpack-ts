@@ -2,14 +2,17 @@
   "name": "webpack-ts",
   "version": "1.0.0",
   "description": "Boilerplate setup for typescript, webpack and eslint.",
-  "categories": ["Snippets", "Other"],
+  "categories": [
+    "Snippets",
+    "Other"
+  ],
   "author": {
     "name": "Binboukami",
     "url": "https://github.com/Binboukami"
   },
   "repository": {},
   "scripts": {
-    "dev": "webpack-dev-server --config=webpack.config.dev.js",
+    "dev": "webpack-dev-server --color --no-stats --config=webpack.config.dev.js",
     "build": "webpack --config=webpack.config.prod.js",
     "start": "live-server dist",
     "lint": "eslint . --ext .ts"

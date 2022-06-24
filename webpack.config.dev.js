@@ -1,4 +1,5 @@
 const path = require("path")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin")
 
 module.exports = {
@@ -30,6 +31,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Index',
+      template: "./src/index.ejs"
     }),
   ],
   resolve: {
@@ -48,6 +50,7 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "public"),
     assetModuleFilename: 'assets/[hash][ext][query]',
+    cache: true
   },
   devServer: {
     compress: true,
