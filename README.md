@@ -33,5 +33,10 @@ $ npm run start
 
 ## Optional dependencies
 These depedencies are included as optional since they aren't necessary for the boilerplate project but can make development easier.
-- Jest (Unit testing)
+
+### Unit testing
+
+- Jest
+- Mocha
+
 
